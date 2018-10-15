@@ -1,0 +1,25 @@
+
+ldap://domaincontroller1.company.com:389
+
+DN:
+CN=SVC_ACCOUNT,OU=Service Accounts,DC=company,DC=com
+
+LDAP User search:
+[
+ "OU=Users,OU=Standard Accounts,DC=company,DC=com",
+ "SCOPE_SUBTREE",
+ "(sAMAccountName=%(user)s)"
+]
+
+LDAP Group Search:
+[
+ "OU=Standard Groups,DC=comany,DC=com",
+ "SCOPE_SUBTREE",
+ "(objectclass=group)"
+]
+
+LDAP Group Type parameters;
+
+{
+ "member_attr": "member",
+ "name_attr": "cn"
